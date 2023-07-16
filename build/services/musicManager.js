@@ -28,7 +28,7 @@ class Player {
         this.queue.push(music);
     }
     playNext() {
-        const newMusic = this.queue.pop();
+        const newMusic = this.queue.shift();
         if (newMusic) {
             this.playing = newMusic;
             const resYTDL = (0, ytdl_core_1.default)(newMusic.url, { filter: 'audioonly' });

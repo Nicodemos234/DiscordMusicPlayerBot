@@ -50,7 +50,7 @@ class Player {
   }
 
   playNext() {
-    const newMusic = this.queue.pop()
+    const newMusic = this.queue.shift()
     if (newMusic) {
       this.playing = newMusic
       const resYTDL = ytdl(newMusic.url, { filter: 'audioonly' })
