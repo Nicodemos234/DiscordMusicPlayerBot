@@ -7,7 +7,7 @@ import {
   joinVoiceChannel,
 } from '@discordjs/voice'
 import { VoiceBasedChannel } from 'discord.js'
-import * as ytdl from 'ytdl-core'
+import ytdl from 'ytdl-core'
 
 const NO_CHANNEL_ERROR = 'Não estou em um canal de música bobo :)'
 

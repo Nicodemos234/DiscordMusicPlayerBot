@@ -7,7 +7,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "npx nodemon",
-    "start": "npx ts-node ./src/index.ts"
+    "start": "npx ts-node ./src/index.ts",
+    "prod": "node build/index.js",
+    "build": "tsc"
   },
   "devDependencies": {
     "@types/node": "^20.4.2",
