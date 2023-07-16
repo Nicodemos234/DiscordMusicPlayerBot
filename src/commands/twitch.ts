@@ -5,7 +5,7 @@ export const Twitch: Command = {
   name: 'twitch',
   description: 'Retorna a twitch do criador',
   type: ApplicationCommandType.ChatInput,
-  run: async (client: Client, interaction: CommandInteraction) => {
+  run: async (_: Client, interaction: CommandInteraction) => {
     const content = 'Segue nós na twitch: https://twitch.tv/Nicodemos234 :)'
 
     await interaction.followUp({
