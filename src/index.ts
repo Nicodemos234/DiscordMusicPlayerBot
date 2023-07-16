@@ -2,6 +2,7 @@ import 'dotenv/config'
 import { Client, GatewayIntentBits } from 'discord.js'
 import { ready } from './listeners/ready'
 import { interactionCreate } from './listeners'
+import { MusicManager } from './services'
 
 const client = new Client({
   intents: [
@@ -14,8 +15,9 @@ const client = new Client({
   ],
 })
 
+const musicManager = new MusicManager()
 ready(client)
-interactionCreate(client)
+interactionCreate(client, musicManager)
 
 //Authenticating
 client.login(process.env.TOKEN)
