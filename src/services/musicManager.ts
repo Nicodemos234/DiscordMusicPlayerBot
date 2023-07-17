@@ -121,6 +121,7 @@ export class MusicManager {
   stop(channel: VoiceBasedChannel) {
     const player = this.players.find((player) => player.id === channel.id)
     if (player && !!player.playing) {
+      this.players = this.players.filter((player) => player.id !== channel.id)
       return player.stop()
     } else {
       return NO_CHANNEL_ERROR
